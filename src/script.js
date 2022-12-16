@@ -275,8 +275,8 @@ BushTree2.position.set(
 );
 
 const BushTree2n2 = new Mesh(bushGeometry, bushMaterial);
-BushTree1n2.scale.set(0.75, 0.75, 0.75);
-BushTree1n2.position.set(
+BushTree2n2.scale.set(0.75, 0.75, 0.75);
+BushTree2n2.position.set(
   tree2.position.x - 0.5,
   tree2.position.y * 2.25,
   tree2.position.z
