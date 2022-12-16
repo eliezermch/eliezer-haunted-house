@@ -218,13 +218,20 @@ scene.add(swing);
 
 // swingColums
 
-const swingColumnLeft = new THREE.Mesh(treeGeometry, treeMaterial);
+const swingColumnsMaterial = new THREE.MeshStandardMaterial({
+  color: "#b2b6b1",
+});
+
+swingColumnsMaterial.metalness = 0.4;
+swingColumnsMaterial.roughness = 0.7;
+
+const swingColumnLeft = new THREE.Mesh(treeGeometry, swingColumnsMaterial);
 swingColumnLeft.scale.set(-0.15, 0.6, -0.15);
 swingColumnLeft.position.x = columnLeft.position.x + 1;
 swingColumnLeft.position.y = 1.5;
 swingColumnLeft.position.z = 10 - 3.5;
 
-const swingColumnRight = new THREE.Mesh(treeGeometry, treeMaterial);
+const swingColumnRight = new THREE.Mesh(treeGeometry, swingColumnsMaterial);
 swingColumnRight.scale.set(-0.15, 0.6, -0.15);
 swingColumnRight.position.x = columnRight.position.x - 1;
 swingColumnRight.position.y = 1.5;
